@@ -1,0 +1,151 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"oFeedURL": {
+					"type": "input",
+					"left": 27,
+					"top": 21,
+					"width": 544,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.FeedURL"
+				},
+				"oLoad": {
+					"type": "button",
+					"top": 19,
+					"left": 667,
+					"width": 80,
+					"height": 20,
+					"dataSource": "",
+					"text": "Load",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/oLoad.4dm"
+				},
+				"oItems": {
+					"type": "listbox",
+					"left": 28,
+					"top": 87,
+					"width": 720,
+					"height": 236,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.feedItems",
+					"sizingX": "grow",
+					"scrollbarHorizontal": "hidden",
+					"currentItemSource": "Form:C1466.item",
+					"method": "ObjectMethods/oItems.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Date",
+								"name": "Header1",
+								"verticalAlign": "automatic",
+								"textAlign": "center"
+							},
+							"name": "Column1",
+							"width": 80,
+							"dataSource": "This:C1470.Date",
+							"dataSourceTypeHint": "date",
+							"resizable": false,
+							"enterable": false,
+							"footer": {
+								"name": "Footer1"
+							}
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Title"
+							},
+							"name": "Column2",
+							"width": 625,
+							"dataSource": "This:C1470.Title",
+							"footer": {
+								"name": "Footer2"
+							}
+						}
+					]
+				},
+				"oWebArea": {
+					"type": "webArea",
+					"left": 28,
+					"top": 338,
+					"width": 720,
+					"height": 286,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "",
+					"urlSource": "about:blank"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Title:",
+					"top": 51,
+					"left": 28,
+					"width": 115,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"Input": {
+					"type": "input",
+					"left": 148,
+					"top": 51,
+					"width": 599,
+					"height": 17,
+					"dataSource": "Form:C1466.feedTitle",
+					"sizingX": "grow",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"menuBar": "Barre #1"
+}
