@@ -6,7 +6,7 @@ $url:=Form:C1466.FeedURL
 
 ON ERR CALL:C155("ErrorMethod")
 $httpCode:=HTTP Get:C1157($url;$httpResponse)
-ON ERR CALL:C155()
+ON ERR CALL:C155("")
 If ($httpCode=200)
 	$feed:=ParseRSS ($httpResponse)
 	
